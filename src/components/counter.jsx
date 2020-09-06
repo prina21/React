@@ -6,6 +6,14 @@ class Counter extends Component {
     tags: ["tag1", "tag2", "tag3"],
   };
 
+  componentDidMount(prevProps, prevState) {
+    console.log("Component Mounted");
+  }
+
+  componentWillUnmount() {
+    console.log("Counter --Unmount");
+  }
+
   //   constructor() {
   //     super();
   //     this.handleIncrement = this.handleIncrement.bind(this);
@@ -23,6 +31,7 @@ class Counter extends Component {
   }
 
   render() {
+    console.log("Counter - Rendered");
     return (
       <div>
         {this.props.children}
